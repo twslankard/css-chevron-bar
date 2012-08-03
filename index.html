@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="reset.css" type="text/css">
+<style type="text/css">
+
+
+body {
+  padding: 5em;
+}
+
+.chev, .first-chev, .last-chev {
+  vertical-align: top;
+  position: relative;
+  background: #333;
+  color: #fff;
+  display: inline;
+  border: none;
+  padding-top: 0.420em;
+  padding-bottom: 0.420em;
+/*
+  padding-right: 1.5em;
+*/
+  font-size: 1.5em;
+  line-height: 1em;
+  margin-right: 1em;
+  padding-right: 0.7em;
+}
+
+/*
+.chev:hover, .first-chev:hover, .last-chev:hover {
+  background-color:#666; 
+  border-color:#666;
+}*/
+
+.chev a, .first-chev a, .last-chev a {
+  text-decoration: none;
+  padding: 0.5em;
+  color: #fff;
+}
+
+.chev:before, .chev:after, .first-chev:after, .last-chev:before {
+
+  vertical-align: top;
+  content: ' ';
+  height: 0;
+  position: absolute;
+  width: 0;
+  border: 1.0em solid transparent;
+  border-left-width: 0.5em;
+  border-right-width: 0.5em;
+  top: 50%;
+  margin-top: -1.0em;
+
+  line-height: 1em;
+}
+
+.chev:before, .last-chev:before {
+  border-top-color: #333;
+  border-bottom-color: #333;
+  border-right-color: #333;
+  right: 100%;
+}
+
+.chev:after, .first-chev:after {
+  border-left-color: #333;
+  left: 100%;
+  margin-left: -0.01em;
+}
+
+</style>
+</head>
+<body>
+<ul>
+<li class="first-chev"><a href="http://example.com">Foo</a></li>
+<li class="chev"><a href="http://example.com">Bar</a></li>
+<li class="chev"><a href="http://example.com">Baz</a></li>
+<li class="chev"><a href="http://example.com">Bartledoo</a></li>
+<li class="chev"><a href="http://example.com">Erhmagerd</a></li>
+<li class="chev"><a href="http://example.com">Shoop Da Woop</a></li>
+<li class="last-chev"><a href="http://example.com">Harbl</a></li>
+</ul>
+</body>
