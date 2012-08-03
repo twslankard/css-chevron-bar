@@ -1,14 +1,25 @@
 <!DOCTYPE html>
+<!--
+  chevronbar/index.html
+  2012 Tom Slankard <twslankard@gmail.com>
+  public domain license
+-->
 <head>
-<link rel="stylesheet" href="reset.css" type="text/css">
 <style type="text/css">
 
 
 body {
+  margin: 0;
   padding: 5em;
 }
 
-.chev, .first-chev, .last-chev {
+ul.chevronbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.chevronbar li {
   vertical-align: top;
   position: relative;
   background: #333;
@@ -17,28 +28,20 @@ body {
   border: none;
   padding-top: 0.420em;
   padding-bottom: 0.420em;
-/*
-  padding-right: 1.5em;
-*/
   font-size: 1.5em;
   line-height: 1em;
   margin-right: 1em;
   padding-right: 0.7em;
 }
 
-/*
-.chev:hover, .first-chev:hover, .last-chev:hover {
-  background-color:#666; 
-  border-color:#666;
-}*/
-
-.chev a, .first-chev a, .last-chev a {
+ul.chevronbar li a {
   text-decoration: none;
   padding: 0.5em;
   color: #fff;
 }
 
-.chev:before, .chev:after, .first-chev:after, .last-chev:before {
+ul.chevronbar li:before,
+ul.chevronbar li:after {
 
   vertical-align: top;
   content: ' ';
@@ -51,32 +54,46 @@ body {
   top: 50%;
   margin-top: -1.0em;
 
-  line-height: 1em;
 }
 
-.chev:before, .last-chev:before {
+ul.chevronbar li:before {
   border-top-color: #333;
   border-bottom-color: #333;
   border-right-color: #333;
   right: 100%;
 }
 
-.chev:after, .first-chev:after {
+ul.chevronbar li:after {
   border-left-color: #333;
   left: 100%;
   margin-left: -0.01em;
 }
 
+li.first {
+
+  padding-left: 0.5em;
+}
+
+li.first:before {
+  border: none !important ;
+}
+
+
+li.last:after {
+
+  border: none !important;
+}
+
 </style>
 </head>
 <body>
-<ul>
-<li class="first-chev"><a href="http://example.com">Foo</a></li>
-<li class="chev"><a href="http://example.com">Bar</a></li>
-<li class="chev"><a href="http://example.com">Baz</a></li>
-<li class="chev"><a href="http://example.com">Bartledoo</a></li>
-<li class="chev"><a href="http://example.com">Erhmagerd</a></li>
-<li class="chev"><a href="http://example.com">Shoop Da Woop</a></li>
-<li class="last-chev"><a href="http://example.com">Harbl</a></li>
+<ul class="chevronbar">
+<li class="first"><a href="http://example.com">Foo</a></li>
+<li><a href="http://example.com">Bar</a></li>
+<li><a href="http://example.com">Baz</a></li>
+<li><a href="http://example.com">Bartledoo</a></li>
+<li><a href="http://example.com">Erhmagerd</a></li>
+<li><a href="http://example.com">Shoop Da Woop</a></li>
+<li class="last"><a href="http://example.com">Harbl</a></li>
 </ul>
 </body>
